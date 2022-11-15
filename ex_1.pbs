@@ -1,0 +1,13 @@
+#!/bin/bash --login
+#PBS -N job_upc_ex1
+#PBS -l mppwidth=24
+#PBS -l mppnppn=24
+#PBS -l walltime=00:01:00
+#PBS -A d26
+  
+# Change to the direcotry that the job was submitted from
+cd $PBS_O_WORKDIR
+
+# Launch the parallel job
+aprun -n 24 -N 24 ./ex_1
+
